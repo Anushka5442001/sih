@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Navbar from '../components/ui/Navbar'; // Add this import
+import Navbar from '../components/ui/Navbar';
 
 const LiveLocation = () => {
   const [location, setLocation] = useState({ lat: 0, lng: 0 });
@@ -34,33 +34,28 @@ const LiveLocation = () => {
       : "#4DFFB3";
 
   return (
-    <div className="w-full min-h-screen bg-[#0A0D14] flex items-center justify-center p-6">
-      <div className="bg-white/5  backdrop-blur-md border border-white/10 rounded-3xl shadow-xl max-w-4xl w-full p-8 flex  space-y-6">
-       <div className="flex flex-col md:flex-row justify-between items-center w-full mb-6 space-y-4 md:space-y-0">
-         <div>
-          {/* Header */}
-        <h1 className="text-3xl font-semibold text-white">
-          Live Location & Traffic
-        </h1>
-
-        {/* Coordinates */}
-        <div className="text-white text-lg space-y-1">
-          <p>Latitude: {location.lat.toFixed(5)}</p>
-          <p>Longitude: {location.lng.toFixed(5)}</p>
+    <div className="w-full min-h-screen bg-[#0A0D14] text-white flex flex-row">
+      <Navbar />
+      <div className="w-full p-6 flex items-start justify-center">
+        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-xl max-w-4xl w-full p-8 flex flex-col space-y-6">
+          <div className="flex flex-col md:flex-row justify-between items-center w-full mb-2 space-y-4 md:space-y-0">
+            <div>
+              <h1 className="text-3xl font-semibold">Live Location & Traffic</h1>
+              <div className="text-white text-lg space-y-1">
+                <p>Latitude: {location.lat.toFixed(5)}</p>
+                <p>Longitude: {location.lng.toFixed(5)}</p>
+              </div>
+            </div>
+            <div
+              className="px-8 max-w-xl max-h-md py-3 rounded-full font-medium text-white w-max"
+              style={{ backgroundColor: trafficColor }}
+            >
+              Traffic: {traffic}
+            </div>
+          </div>
         </div>
-        </div>
-
-        {/* Traffic Status */}
-        <div
-          className="px-8 max-w-xl max-h-md py-3 rounded-full font-medium text-white w-max"
-          style={{ backgroundColor: trafficColor }}
-        >
-          Traffic: {traffic}
-        </div>
-       </div>
-
       </div>
-    
+    </div>
   );
 };
 

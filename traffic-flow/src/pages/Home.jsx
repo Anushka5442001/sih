@@ -1,11 +1,15 @@
 import React from 'react'
-import Dash_2 from './Dash_2'
-import Dash_1 from './Dash_1'
+import Navbar from '../components/ui/Navbar'
+import Pannel from '../components/Pannel'
+import TrafficDashboard from '../components/ui/Dashboard'
 function Home() {
   return (
-    <div>
-      <Dash_1/>
-      <Dash_2/>
+    <div className=' w-full bg-[#0A0D14] text-white flex flex-row min-h-screen'>
+      <Navbar/>
+      <div className='w-full p-3 flex flex-col gap-4'>
+        <Pannel />
+        <TrafficDashboard />
+      </div>
     </div>
   )
 }

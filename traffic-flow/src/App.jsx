@@ -1,18 +1,15 @@
-import { useState } from 'react'
-import Login from './pages/Log_in'
-import LandingPage from './pages/Landing'
 import Home from './pages/Home'
-import Contact from './pages/Contact'
-
+import LiveLocation from './pages/Traffic_update'
 import Upload from './pages/Upload'
 import { Routes, Route } from 'react-router-dom'
 function App() {
-
-
   return (
-    <div className='bg-[#0A0D14]'>
-    <Home/>
-    <LiveLocation/>
+    <div className='bg-[#0A0D14] min-h-screen'>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/live' element={<LiveLocation />} />
+        <Route path='/upload' element={<Upload />} />
+      </Routes>
     </div>
   )
 }
