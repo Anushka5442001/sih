@@ -1,39 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import car from '../../assets/car.svg'
-
 function Navbar() {
   return (
-    <div className='bg-[#0d1117] min-w-[16%] flex flex-col p-4 gap-8 text-gray-400 font-[roboto] border-r border-gray-600 shadow-lg'>
-      {/* Header */}
-      <div className='flex items-center gap-2 pb-4 border-b border-gray-600'>
-        <img src={car} alt="car" className='w-6 h-6' />
-        <h2 className='text-white font-bold text-lg tracking-wide'>TRAFFIC FLOW</h2>
+    <div className='bg-[#0d1117] min-w-[16%]  flex flex-col   p-1  gap-10 text-gray-400 font-[roboto] border-r-1 border-gray-600 '>
+    <div className='flex gap-1.5 border-b-gray-600 border-1 border-t-0 border-l-0 border-r-0 w-100% p-0'><img src={car} alt="car" /><h2>TRAFFIC FLOW</h2></div>
+    <h2 className='italic font-sans font-extrabold'>NAVIGATION</h2>
+    <div className='italic font-[roboto] h-[50%] flex flex-col gap-3 text-md text-white'>
+      <a href="">Dashboard</a>
+      <a href="">Live location</a>
+      <a href="">Incidents</a>
+      <a href="">Analytics</a>
+      <a href="">Traffic lights</a>
       </div>
-      
-      {/* Navigation Title */}
-      <h2 className='italic font-sans font-extrabold text-gray-300 text-sm tracking-widest'>NAVIGATION</h2>
-      
-      {/* Navigation Links */}
-      <div className='italic font-[roboto] flex flex-col gap-3 text-base'>
-        <Link to='/' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Dashboard
-        </Link>
-        <Link to='/live' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Live location
-        </Link>
-        <Link to='/upload' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Upload files
-        </Link>
-        <Link to='/' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Incidents
-        </Link>
-        <Link to='/' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Analytics
-        </Link>
-        <Link to='/' className='text-gray-300 hover:text-white hover:bg-gray-800 px-3 py-2 rounded-md transition-all duration-200 ease-in-out'>
-          Traffic lights
-        </Link>
+      <div className='flex flex-col h-[30%] gap-3 text-md '>
+        <a className='text-red-500' href="">LOG IN</a>
+        <a className='text-white' href="">SIGN UP</a>
       </div>
       
       {/* Auth Links */}
